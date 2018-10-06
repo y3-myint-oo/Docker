@@ -64,3 +64,10 @@ docker service create \
 
 - docker network create --driver overlay my_network_name
 
+## Docker Remove Network
+- docker network rm my_network_name
+~~~
+Error - response from daemon: network docker_gwbridge id 4231cbbf8269fb3136c75e734a10fb8f20251b369dc26f5bbbde4aedfe4615c8 has active endpoints
+Solution - Can you try using --force to disconnect the container?
+docker network disconnect --force <network> release_diyaserver_1
+~~~
