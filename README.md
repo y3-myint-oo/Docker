@@ -71,3 +71,9 @@ Error - response from daemon: network docker_gwbridge id 4231cbbf8269fb3136c75e7
 Solution - Can you try using --force to disconnect the container?
 docker network disconnect --force <network> release_diyaserver_1
 ~~~
+
+### Deploying the service
+- docker service ls
+- docker service create --name=service_name --replicas=1 --network=my_network_name -p=6767:6767 someprefix/image_name 
+
+
