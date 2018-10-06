@@ -49,5 +49,18 @@ You can use CGO_ENABLED=0 to build your binary statically.
 
 - [Docker Machine](https://docs.docker.com/machine/install-machine/#install-machine-directly)
 - [Deriklupander's Swarm Manager Configuration](https://github.com/callistaenterprise/goblog/blob/master/extras/docker-setup.md)
+- [Swarm Visualizer](https://github.com/ManoMarks/docker-swarm-visualizer)
 
+~~~
+docker service create \
+  --name=viz \
+  --publish=8000:8080/tcp \
+  --constraint=node.role==manager \
+  --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+  manomarks/visualizer    
+~~~
+
+## Docker Network
+
+- docker network create --driver overlay my_network_name
 
