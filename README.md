@@ -47,6 +47,7 @@ You can use CGO_ENABLED=0 to build your binary statically.
 
 ## Docker Swarm
 
+[Docker Machine](https://docs.docker.com/machine/install-machine/#install-machine-directly)
 [Deriklupander's Swarm Manager Configuration](https://github.com/callistaenterprise/goblog/blob/master/extras/docker-setup.md)
 
 
